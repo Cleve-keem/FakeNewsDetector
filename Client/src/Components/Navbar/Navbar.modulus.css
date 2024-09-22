@@ -1,0 +1,39 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 1rem;
+    color: var(--dark);
+    box-shadow: 0 2px 5px var(--shadow);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark);
+}
+h2 > span{
+    color: var(--red);
+}
+.nav-item{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--dark);
+    border-radius: 5px;
+  }
+  .nav-item:hover{
+    color: var(--red);
+    
+  }
+  button{
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background-color: var(--red);
+    color: #fff;
+  }
