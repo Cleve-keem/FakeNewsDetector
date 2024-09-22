@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect } from 'react'
 import './Home.modulus.css'
 import NewsCard from '../NewsCard/NewsCard';
@@ -8,7 +9,7 @@ const Home = () => {
     const [ error, setError ] = useState(null);
     const [ loading, setLoading ] = useState(true);
 
-    const url = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=13&apiKey=b8977644269c43d09378dc71761b932d';
+    const url = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=12&apiKey=b8977644269c43d09378dc71761b932d';
 
     useEffect(() => {
     const fetchData = async () =>{

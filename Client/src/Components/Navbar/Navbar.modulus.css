@@ -7,7 +7,7 @@
     padding: 1rem;
     color: var(--dark);
     box-shadow: 0 2px 5px var(--shadow);
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }

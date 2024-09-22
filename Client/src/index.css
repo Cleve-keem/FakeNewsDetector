@@ -18,10 +18,32 @@
   padding: 2rem;
   margin: auto;
 }
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+.center-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+}
+
 a{
   text-decoration: none;
   color: gray;
 }
+
 img{
   width: 100%;
   object-fit: cover;

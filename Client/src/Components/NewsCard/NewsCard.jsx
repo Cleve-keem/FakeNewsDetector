@@ -1,3 +1,4 @@
+import React from 'react'
 import './NewsCard.modulus.css';
 import moment from 'moment';
 

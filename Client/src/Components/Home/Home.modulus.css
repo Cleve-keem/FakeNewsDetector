@@ -1,6 +1,5 @@
 .home{
     position: relative;
-    top: 50px;
 }
 .header{
     margin-bottom: 1rem;
@@ -9,6 +8,4 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    /* align-items: center; */
-    /* position: relative; */
 }

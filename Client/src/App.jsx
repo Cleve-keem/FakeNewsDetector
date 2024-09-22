@@ -1,9 +1,11 @@
+import React from 'react'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
 import Predictor from './Components/Predictor/Predictor'
 import './App.modulus.css'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   
@@ -21,7 +23,7 @@ function App() {
           </div>
         </div>
       </Router>
-
+      <Footer />
     </>
   )
 }
