@@ -34,11 +34,31 @@ const Home = () => {
     if (loading) return <div>Loading...</div>
     if (error) return <div>Error: {error}</div>
 
-    let updatedData = data.articles;
+    const newData = data.articles;
+    let modifiedDatum;
+    let updatedData = [];       
 
-    updatedData = updatedData.filter((item) => item.content !== "[Removed]" && item.urlToImage)
+    // for(let i = 0; i < newData.length; i++){
+    //     if(newData[i].content !== "[Removed]" && newData[i].urlToImage){
+    //         modifiedDatum = newData[i];
+    //     }
+    //     console.log(modifiedDatum);
+    //     updatedData.push(modifiedDatum);
+    // }
 
+    let i = 0 // This is a counter
+
+    while( i < newData.length){
+      if (newData[i].content !== "[Removed]" && newData[i].urlToImage){
+        modifiedDatum = newData[i];
+        updatedData.push(modifiedDatum);
+      }
+      i++
+    }
+
+    // updatedData = updatedData.filter((item) => item.content !== "[Removed]" && item.urlToImage)
     console.log(updatedData);
+
 
     return(
         <div className="home container">
