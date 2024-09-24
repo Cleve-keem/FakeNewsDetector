@@ -1,0 +1,38 @@
+.wrapper{
+    width: 100%;
+    /* height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.predictor{
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 1rem;
+}
+
+.predictor .desc{
+    width: 400px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+textarea{
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 2rem;
+    font-size: 16px;
+    outline: none;
+}
+
+.predictBtn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+

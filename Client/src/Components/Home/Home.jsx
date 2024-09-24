@@ -31,8 +31,20 @@ const Home = () => {
     fetchData();
     },[]);
 
-    if (loading) return <div>Loading...</div>
-    if (error) return <div>Error: {error}</div>
+    if (loading) return (
+        <div className='container'>
+            <div className='loading-page'>
+                Loading...
+            </div>
+        </div>   
+    )
+    if (error) return (
+        <div className='container'>
+            <div className="error-page">
+                Error: {error}
+            </div>
+        </div>
+    )
 
     const newData = data.articles;
     let modifiedDatum;

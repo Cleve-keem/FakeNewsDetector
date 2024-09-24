@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import './Predictor.modulus.css'
 
 function Predictor() {
   const [news, setNews] = useState("");
@@ -36,20 +37,28 @@ function Predictor() {
   };
 
   return (
-    <div>
-      <h1>ML Fake News Prediction</h1>
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={news}
-          onChange={(e) => setNews(e.target.value)}
-          placeholder="Enter Your News"
-          name="input_text"
-          required
-        ></textarea>
-        <button type="submit">Predict</button>
-      </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error if any */}
-      {prediction && <p>Prediction: {prediction}</p>} {/* Display prediction */}
+    <div className='container'>
+      <div className="wrapper">
+        <div className="predictor">
+          <div className="center-vertical content">
+            <h1>Fake News Detector</h1>
+            <p className='desc'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis reprehenderit, ullam maxime in facilis.</p>
+          </div>
+          <form onSubmit={handleSubmit} className='center-vertical'>
+            <textarea
+            className='text-section'
+              value={news}
+              onChange={(e) => setNews(e.target.value)}
+              placeholder="Enter Your News"
+              name="input_text"
+              required
+            ></textarea>
+            <button className='predictBtn' type="submit">Predict</button>
+          </form>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {prediction && <p>Prediction: {prediction}</p>}
+        </div>
+      </div>
     </div>
   );
 }
