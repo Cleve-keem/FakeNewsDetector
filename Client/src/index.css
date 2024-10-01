@@ -9,7 +9,7 @@
   --white: #fff;
   --dark: #222;
   --seafoam: #9FE2BF;
-  --red: #ff0000;
+  --red: rgb(255, 0, 0);
   --shadow: #0000004d;
 }
 

@@ -12,30 +12,28 @@ const Home = () => {
     const url = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=12&apiKey=b8977644269c43d09378dc71761b932d';
 
     useEffect(() => {
-    const fetchData = async () =>{
-        try{
-        const response = await fetch(url);
-        if (!response.ok){
-            throw new Error('Network response was not ok');
-        }
-        const result = await response.json();
-        // console.log(result)
-        setData(result);
-        }
-        catch(error){
-        setError(error.message);
-        }
-        finally{setLoading(false)}
-    };
+        const fetchData = async () =>{
+            try{
+            const response = await fetch(url);
+            if (!response.ok){
+                throw new Error('Network response was not ok');
+            }
+            const result = await response.json();
+            // console.log(result)
+            setData(result);
+            }
+            catch(error){
+            setError(error.message);
+            }
+            finally{setLoading(false)}
+        };
 
-    fetchData();
+        fetchData();
     },[]);
 
     if (loading) return (
-        <div className='container'>
-            <div className='loading-page'>
-                Loading...
-            </div>
+        <div className='spinner-container'>
+            <div className='loading-page spinner'></div>
         </div>   
     )
     if (error) return (

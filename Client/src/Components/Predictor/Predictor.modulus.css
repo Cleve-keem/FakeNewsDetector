@@ -32,7 +32,10 @@ textarea{
 .predictBtn{
     width: 200px;
     height: 50px;
+    margin-bottom: 1rem;
     font-size: 20px;
     font-weight: bold;
 }
-
+.result{
+    text-align: center;
+}

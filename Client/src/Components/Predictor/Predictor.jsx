@@ -55,8 +55,8 @@ function Predictor() {
             ></textarea>
             <button className='predictBtn' type="submit">Predict</button>
           </form>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-          {prediction && <p>Prediction: {prediction}</p>}
+          {error && <p className='error result'>{error}</p>}
+          {prediction && <p className='prediction result'>Prediction: {prediction}</p>}
         </div>
       </div>
     </div>

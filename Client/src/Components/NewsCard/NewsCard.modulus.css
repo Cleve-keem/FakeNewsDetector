@@ -9,6 +9,9 @@
 .card-info{
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .card-title{
     font-weight: bold;
@@ -18,5 +21,5 @@
     scale: 1.01;
 }
 .source{
-    margin-top: 1rem;
+    margin-top: auto;
 }

@@ -9,3 +9,38 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+
+.spinner {
+    margin: 150px auto;
+    scale: 0.65;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, white 50%, transparent 50%),
+                linear-gradient(0deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0) 100%) center/4.5px 100%,
+                linear-gradient(90deg, rgba(255, 0, 0, 0.2) 50%, rgba(255, 0, 0, 0.75) 0) center/100% 4.5px;
+    background-repeat: no-repeat;
+    animation: spin 1s infinite steps(12);
+}
+
+.spinner::before,
+.spinner::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.915;
+    transform: rotate(30deg);
+}
+
+.spinner::after {
+    opacity: 0.83;
+    transform: rotate(60deg);
+}
+
+@keyframes spin{
+    100% {
+        transform: rotate(1turn);
+    }
+}

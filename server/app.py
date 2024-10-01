@@ -87,6 +87,11 @@ def predict():
         # Convert numpy.int64 to Python int before returning the response
         prediction = int(prediction)
 
+        if (prediction == 1):
+            prediction = "Real News!"
+        elif (prediction == 0):
+            prediction = "Fake News!"
+
         return jsonify({'prediction': prediction})
     except Exception as e:
         logging.error("Error during prediction: %s", str(e))
